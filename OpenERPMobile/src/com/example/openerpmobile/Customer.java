@@ -19,11 +19,6 @@ public class Customer
 		this.setEmail(_email);
 	}
 	
-	//Jeœli w Javie jest coœ takiego jak w³aœciwoœæ, to mam nadziejê, ¿e...
-	//poni¿szym kawa³kiem kodu nie straci³em zbyt wiele w waszych oczach.
-	//Tak czy inaczej myœlê, ¿e to mo¿e zostaæ;
-	//jak kogoœ to bardzo razi i ma za du¿o wolnego czasu, to mo¿e dorobiæ w³aœciwoœci..:>
-	//MB
 	
 	public void setId (long _id)
 	{
