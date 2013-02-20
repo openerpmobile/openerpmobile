@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    tools:context=".loginActivity" >
+
+    <TextView
+        android:id="@+id/loginA_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/loginAct_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/loginAct_edit_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/loginAct_text_server"
+        android:layout_toRightOf="@+id/loginAct_text_server"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/loginAct_text_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/loginA_title"
+        android:layout_marginTop="26dp"
+        android:text="@string/loginAct_server"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/loginAct_dbspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/loginAct_text_db"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/loginAct_text_db"
+        android:entries="@array/loginAct_dbArr"
+        android:prompt="@string/loginAct_db_prompt" />
+
+    <EditText
+        android:id="@+id/loginAct_edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/loginAct_dbspinner"
+        android:layout_toRightOf="@+id/loginAct_text_username"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/loginAct_edit_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginAct_edit_username"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/loginAct_text_pswd"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/loginAct_text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/loginAct_edit_username"
+        android:layout_alignParentLeft="true"
+        android:text="@string/loginAct_username"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/loginAct_text_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginAct_edit_username"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/loginAct_edit_pswd"
+        android:text="@string/loginAct_paswd"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/loginAct_text_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/loginAct_edit_server"
+        android:layout_marginTop="32dp"
+        android:text="@string/loginAct_db"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginAct_text_pswd"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/loginAct_edit_pswd" >
+
+        <Button
+            android:id="@+id/loginAct_button_login"
+            style="@style/AppBaseTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickButtonLogin"
+            android:text="@android:string/ok" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/button_help"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="help" />
+
+        <Button
+            android:id="@+id/button_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="settings" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.openerpmobile"
+    package="com.lacan.openerpmobile"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Holo.Light" >
         <activity
-            android:name="com.example.openerpmobile.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.lacan.openerpmobile.LoginActivity"
+            android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.lacan.openerpmobile.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        
+        <activity
+            android:name="com.lacan.openerpmobile.SalesActivity"
+            android:label="@string/title_activity_sales"
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lacan.openerpmobile.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.lacan.openerpmobile.CustomerListActivity"
+            android:label="@string/title_activity_customer_list"
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lacan.openerpmobile.SalesActivity" />
+        </activity>
+        <activity
+            android:name="com.lacan.openerpmobile.AccountingActivity"
+            android:label="@string/title_activity_accounting"
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lacan.openerpmobile.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.lacan.openerpmobile.LeadsListActivity"
+            android:label="@string/title_activity_leads_list"
+            android:parentActivityName="com.lacan.openerpmobile.SalesActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lacan.openerpmobile.SalesActivity" />
+        </activity>
+        <activity
+            android:name="com.lacan.openerpmobile.OpportunitiesActivity"
+            android:label="@string/title_activity_opportunities"
+            android:parentActivityName="com.lacan.openerpmobile.SalesActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lacan.openerpmobile.SalesActivity" />
         </activity>
     </application>
 

@@ -2,8 +2,39 @@
 <resources>
 
     <string name="app_name">OpenERP Mobile</string>
-    <string name="action_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
+    <string name="loginAct_title">Tu bedzie pewnie obrazek</string>
+    <string name="loginAct_server">Server:</string>
+    <string name="loginAct_db">Database:</string>
+
+    <string-array name="loginAct_dbArr">
+        <item>FirstDB</item>
+        <item>SecondDB</item>
+        <item>etc</item>
+    </string-array>
+
+    <string name="loginAct_db_prompt">Choos a database</string>
+    <string name="loginAct_username">Username:</string>
+    <string name="loginAct_paswd">Password:</string>
     <string name="hello_world">Hello world!</string>
-    <string name="git_test">GIT TEST</string>
+    <string name="title_activity_main">Main menu</string>
+    <string name="title_activity_sales">Sales</string>
+    <string name="salesAct_button_customers">Customers</string>
+    <string name="salesAct_button_leads">Leads</string>
+    <string name="salesAct_button_opp">Opportunities</string>
+    <string name="salesAct_button_sorder">Sales order</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_home">Home</string>
+    <string name="title_activity_customer_list">Customers</string>
+    <string name="title_activity_leads_list">Leads</string>
+    <string name="title_activity_accounting">Accounting</string>
+    <string name="title_activity_opportunieties">Opportunieties</string>
+    <string name="accountingAct_button_text"></string>
+    <string name="accountingAct_button_custinv">Customer invoices</string>
+    <string name="accountingAct_button_suppinv">Supplier invoices</string>
+    <string name="accountingAct_button_journal">Journal</string>
+    <string name="accountingAct_button_charts">Charts</string>
+    <string name="title_activity_opportunities">OpportunitiesActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>

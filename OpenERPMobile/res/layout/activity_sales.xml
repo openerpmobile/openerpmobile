@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SalesActivity" >
+
+    <Button
+        android:id="@+id/salesAct_button_customers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salesAct_button_customers"
+        android:onClick="onClickCustomers" />
+
+    <Button
+        android:id="@+id/salesAct_button_leads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salesAct_button_leads"
+        android:onClick="onClickLeads" />
+
+    <Button
+        android:id="@+id/salesAct_button_opp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salesAct_button_opp"
+        android:onClick="onClickOpp" />
+
+    <Button
+        android:id="@+id/salesAct_button_sorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salesAct_button_sorder"
+        android:onClick="onClickSOrder" />
+
+</LinearLayout>
