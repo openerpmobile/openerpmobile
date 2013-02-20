@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="right"
+    android:background="@drawable/background"
+    android:gravity="center"
     tools:context=".loginActivity" >
 
     <TextView
@@ -95,28 +96,31 @@
         android:text="@string/loginAct_db"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/loginAct_text_pswd"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/loginAct_edit_pswd" >
 
-        <Button
+        <ImageButton
             android:id="@+id/loginAct_button_login"
             style="@style/AppBaseTheme"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:onClick="onClickButtonLogin"
+            android:src="@drawable/login"
             android:text="@android:string/ok" />
-    </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" >
 
@@ -133,7 +137,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="settings" />
-
     </LinearLayout>
 
 </RelativeLayout>

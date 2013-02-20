@@ -24,19 +24,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int background=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int login=0x7f020002;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
+        public static final int RelativeLayout1=0x7f09000e;
         public static final int accountingAct_button_charts=0x7f090004;
         public static final int accountingAct_button_custinv=0x7f090001;
         public static final int accountingAct_button_journal=0x7f090003;
         public static final int accountingAct_button_suppinv=0x7f090002;
-        public static final int action_settings=0x7f090018;
-        public static final int button_help=0x7f09000f;
-        public static final int button_settings=0x7f090010;
+        public static final int action_settings=0x7f090019;
+        public static final int button_help=0x7f090010;
+        public static final int button_settings=0x7f090011;
         public static final int loginA_title=0x7f090005;
-        public static final int loginAct_button_login=0x7f09000e;
+        public static final int loginAct_button_login=0x7f09000f;
         public static final int loginAct_dbspinner=0x7f090008;
         public static final int loginAct_edit_pswd=0x7f09000c;
         public static final int loginAct_edit_server=0x7f090006;
@@ -45,13 +48,13 @@ public final class R {
         public static final int loginAct_text_pswd=0x7f09000d;
         public static final int loginAct_text_server=0x7f090007;
         public static final int loginAct_text_username=0x7f09000b;
-        public static final int menu_home=0x7f090017;
-        public static final int menu_logout=0x7f090016;
-        public static final int menu_settings=0x7f090015;
-        public static final int salesAct_button_customers=0x7f090011;
-        public static final int salesAct_button_leads=0x7f090012;
-        public static final int salesAct_button_opp=0x7f090013;
-        public static final int salesAct_button_sorder=0x7f090014;
+        public static final int menu_home=0x7f090018;
+        public static final int menu_logout=0x7f090017;
+        public static final int menu_settings=0x7f090016;
+        public static final int salesAct_button_customers=0x7f090012;
+        public static final int salesAct_button_leads=0x7f090013;
+        public static final int salesAct_button_opp=0x7f090014;
+        public static final int salesAct_button_sorder=0x7f090015;
     }
     public static final class layout {
         public static final int activity_accounting=0x7f030000;
