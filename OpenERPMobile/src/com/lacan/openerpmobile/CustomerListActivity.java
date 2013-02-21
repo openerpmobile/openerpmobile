@@ -18,7 +18,7 @@ public class CustomerListActivity extends ListActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_customer_list);
 		// Show the Up button in the action bar.
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		//getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override

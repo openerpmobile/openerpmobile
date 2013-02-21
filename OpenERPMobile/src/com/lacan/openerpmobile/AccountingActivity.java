@@ -17,7 +17,7 @@ public class AccountingActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_accounting);
 		// Show the Up button in the action bar.
-		getActionBar().setDisplayHomeAsUpEnabled(false);
+		//getActionBar().setDisplayHomeAsUpEnabled(false);
 	}
 
 	@Override
@@ -76,3 +76,4 @@ public class AccountingActivity extends Activity
 		//TODO
 	}
 }
+

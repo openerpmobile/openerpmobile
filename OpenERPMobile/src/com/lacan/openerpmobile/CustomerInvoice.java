@@ -2,19 +2,31 @@ package com.lacan.openerpmobile;
 
 public class CustomerInvoice
 {
-	private Customer customer;
+	private long id;
+	private int customerId;
 	private String date;
 	private String number;
-	private long total;
+	private double total;
 
-	public Customer getCustomer()
+	public CustomerInvoice(long id, int customer, String date, String number,
+			double total)
 	{
-		return customer;
+		super();
+		this.setId(id);
+		this.customerId = customer;
+		this.date = date;
+		this.number = number;
+		this.total = total;
 	}
 
-	public void setCustomer(Customer customer)
+	public int getCustomerId()
 	{
-		this.customer = customer;
+		return customerId;
+	}
+
+	public void setCustomer(int customerId)
+	{
+		this.customerId = customerId;
 	}
 
 	public String getDate()
@@ -37,7 +49,7 @@ public class CustomerInvoice
 		this.number = number;
 	}
 
-	public long getTotal()
+	public double getTotal()
 	{
 		return total;
 	}
@@ -47,7 +59,13 @@ public class CustomerInvoice
 		this.total = total;
 	}
 
-	// B≥aøej albo jakiú inny murzynie czy tam jakiú krasnoludku...
-	// Weü dopisz konstruktor i gettery i settry
+	public long getId()
+	{
+		return id;
+	}
 
+	public void setId(long id)
+	{
+		this.id = id;
+	}
 }

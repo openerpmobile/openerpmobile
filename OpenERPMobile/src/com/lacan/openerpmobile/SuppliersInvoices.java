@@ -7,6 +7,16 @@ public class SuppliersInvoices
 	private String number;
 	private long total;
 
+	public SuppliersInvoices(Customer customer, String date, String number,
+			long total)
+	{
+		super();
+		this.customer = customer;
+		this.date = date;
+		this.number = number;
+		this.total = total;
+	}
+
 	public Customer getCustomer()
 	{
 		return customer;
@@ -46,8 +56,4 @@ public class SuppliersInvoices
 	{
 		this.total = total;
 	}
-
-	// B≥aøej albo jakiú inny murzynie czy tam jakiú krasnoludku...
-	// Weü dopisz konstruktor i gettery i settry
-
 }

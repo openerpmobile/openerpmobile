@@ -17,7 +17,7 @@ public class SalesActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sales);
 		// Show the Up button in the action bar.
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		//getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override

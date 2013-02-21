@@ -19,7 +19,6 @@ public class Customer
 		this.setEmail(_email);
 	}
 	
-	
 	public void setId (long _id)
 	{
 		this.id = _id;
@@ -79,4 +78,11 @@ public class Customer
 	{
 		return this.email;
 	}
+
+	@Override
+	public String toString()
+	{
+		return getName();
+	}
+	
 }
