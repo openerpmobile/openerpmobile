@@ -26,6 +26,7 @@ public class LoginActivity extends Activity implements OnItemSelectedListener
 
 		Log.d(TAG, "onCreate");
 
+		//dbSpinner = (Spinner) findViewById(R.id.loginAct_dbspinner);
 		dbSpinner = (Spinner) findViewById(R.id.loginAct_dbspinner);
 	}
 
