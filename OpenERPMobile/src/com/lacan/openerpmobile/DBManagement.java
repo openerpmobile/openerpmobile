@@ -35,26 +35,26 @@ public class DBManagement
 		ContentValues values = new ContentValues();
 		// i wprowadzamy to niej dane, podając jako klucz nazwę kolumny a drugi
 		// argument to wartość
-		values.put(MySQLiteHelper.getColCName(), customer.getName());
-		values.put(MySQLiteHelper.getColCAddress(), customer.getAddress());
-		values.put(MySQLiteHelper.getColCWebsite(), customer.getWebsite());
-		values.put(MySQLiteHelper.getColCPhone(), customer.getPhone());
-		values.put(MySQLiteHelper.getColCEmail(), customer.getEmail());
+		values.put(MySQLiteHelper.COL_C_NAME, customer.getName());
+		values.put(MySQLiteHelper.COL_C_ADDRESS, customer.getAddress());
+		values.put(MySQLiteHelper.COL_C_WEBSITE, customer.getWebsite());
+		values.put(MySQLiteHelper.COL_C_PHONE, customer.getPhone());
+		values.put(MySQLiteHelper.COL_C_EMAIL, customer.getEmail());
 		// i możemy teraz prostą metodą insert wprowadzić dane...
-		db.insert(MySQLiteHelper.getCTableName(), null, values);
+		db.insert(MySQLiteHelper.C_TABLE_NAME, null, values);
 	}
 
 	public void addCustomerInvoice(CustomerInvoice customerInvoice)
 	{
 		ContentValues values = new ContentValues();
 
-		values.put(MySQLiteHelper.getColCiCustomer(),
+		values.put(MySQLiteHelper.COL_CI_CUSTOMER,
 				customerInvoice.getCustomerId());
-		values.put(MySQLiteHelper.getColCiDate(), customerInvoice.getDate());
-		values.put(MySQLiteHelper.getColCiNr(), customerInvoice.getNumber());
-		values.put(MySQLiteHelper.getColCiTotal(), customerInvoice.getTotal());
+		values.put(MySQLiteHelper.COL_CI_DATE, customerInvoice.getDate());
+		values.put(MySQLiteHelper.COL_CI_NR, customerInvoice.getNumber());
+		values.put(MySQLiteHelper.COL_CI_TOTAL, customerInvoice.getTotal());
 
-		db.insert(MySQLiteHelper.getCTableName(), null, values);
+		db.insert(MySQLiteHelper.CI_TABLE_NAME, null, values);
 	}
 
 	private Customer cursorToCustomer(Cursor cursor)
@@ -79,7 +79,7 @@ public class DBManagement
 	{
 		ArrayList<Customer> customers = new ArrayList<Customer>();
 
-		Cursor cursor = db.query(MySQLiteHelper.getCTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.C_TABLE_NAME,
 				dbHelper.getAllCustomersCols(), null, null, null, null, null);
 
 		while (cursor.moveToNext())
@@ -94,7 +94,7 @@ public class DBManagement
 	{
 		ArrayList<CustomerInvoice> customersInvoices = new ArrayList<CustomerInvoice>();
 
-		Cursor cursor = db.query(MySQLiteHelper.getCiTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.CI_TABLE_NAME,
 				dbHelper.getAllCustomersInvoicesCols(), null, null, null, null,
 				null);
 
@@ -110,7 +110,7 @@ public class DBManagement
 	{
 		long idToRemove = 0;
 
-		Cursor cursor = db.query(MySQLiteHelper.getCTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.C_TABLE_NAME,
 				dbHelper.getAllCustomersCols(), null, null, null, null, null);
 
 		while (cursor.moveToNext()
@@ -123,7 +123,7 @@ public class DBManagement
 		{
 			idToRemove = cursorToCustomer(cursor).getId();
 
-			db.delete(MySQLiteHelper.getCTableName(), BaseColumns._ID + " = "
+			db.delete(MySQLiteHelper.C_TABLE_NAME, BaseColumns._ID + " = "
 					+ idToRemove, null);
 		}
 	}
@@ -132,7 +132,7 @@ public class DBManagement
 	{
 		long idToRemove = 0;
 
-		Cursor cursor = db.query(MySQLiteHelper.getCiTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.CI_TABLE_NAME,
 				dbHelper.getAllCustomersInvoicesCols(), null, null, null, null,
 				null);
 
@@ -147,17 +147,17 @@ public class DBManagement
 		{
 			idToRemove = cursorToCustomerInvoice(cursor).getId();
 
-			db.delete(MySQLiteHelper.getCiTableName(), BaseColumns._ID + " = "
+			db.delete(MySQLiteHelper.CI_TABLE_NAME, BaseColumns._ID + " = "
 					+ idToRemove, null);
 		}
 	}
 
 	public long customersTableRowsCount()
 	{
-		Cursor cursor = db.query(MySQLiteHelper.getCTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.C_TABLE_NAME,
 				dbHelper.getCustomersColsWithoutID(), null, null, null, null,
 				null);
-		
+
 		long i;
 
 		for (i = 0; cursor.moveToNext(); i++)
@@ -169,13 +169,13 @@ public class DBManagement
 
 		return i;
 	}
-	
+
 	public long customersInvoicesTableRowsCount()
 	{
-		Cursor cursor = db.query(MySQLiteHelper.getCiTableName(),
+		Cursor cursor = db.query(MySQLiteHelper.CI_TABLE_NAME,
 				dbHelper.getCustomersColsWithoutID(), null, null, null, null,
 				null);
-		
+
 		long i;
 
 		for (i = 0; cursor.moveToNext(); i++)
