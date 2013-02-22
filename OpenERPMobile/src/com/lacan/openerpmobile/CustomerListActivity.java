@@ -2,23 +2,36 @@ package com.lacan.openerpmobile;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SimpleCursorAdapter;
 
 public class CustomerListActivity extends ListActivity
 {
 	public static final String TAG = "CustomerListActivity";
 
-	
+	public static final String[] FROM =
+		{ CustomerData.C_NAME, CustomerData.C_EMAIL };
+	public static final int[] TO =
+	{ android.R.id.text1, android.R.id.text2 };
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_customer_list);
 		// Show the Up button in the action bar.
-		//getActionBar().setDisplayHomeAsUpEnabled(true);
+		// getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		Cursor cursor = ((OpenERPApp) getApplication()).customerData.query();
+
+		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
+				android.R.layout.two_line_list_item, cursor, FROM, TO);
+
+		getListView().setAdapter(adapter);
 	}
 
 	@Override
