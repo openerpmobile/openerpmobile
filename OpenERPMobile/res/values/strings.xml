@@ -7,13 +7,13 @@
     <string name="loginAct_server">Server:</string>
     <string name="loginAct_db">Database:</string>
 
-    <string-array name="loginAct_dbArr">
+    <string-array name="loginAct_db_arr">
         <item>FirstDB</item>
         <item>SecondDB</item>
         <item>etc</item>
     </string-array>
 
-    <string name="loginAct_db_prompt">Choos a database</string>
+    <string name="loginAct_db_prompt">Choose a database</string>
     <string name="loginAct_username">Username:</string>
     <string name="loginAct_paswd">Password:</string>
     <string name="hello_world">Hello world!</string>

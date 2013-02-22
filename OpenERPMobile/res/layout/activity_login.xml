@@ -6,125 +6,94 @@
     android:gravity="center"
     tools:context=".loginActivity" >
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout1"
+    <ImageView
+        android:id="@+id/img_txt_server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/loginAct_button_login" >
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:gravity="bottom" >
-
-        <Button
-            android:id="@+id/button_help"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_help" />
-
-        <Button
-            android:id="@+id/button_settings"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_settings" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/loginAct_dbspinner"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/text_user" />
-
-    <EditText
-        android:id="@+id/loginAct_edit_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:background="@drawable/text_bar"
-        android:ems="10" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/loginAct_edit_username"
-        android:layout_below="@+id/loginAct_edit_username"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/text_pswd" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/loginAct_edit_server"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/text_server" />
+        android:contentDescription="@string/loginAct_server"
+        android:src="@drawable/text_server" />
 
     <EditText
-        android:id="@+id/loginAct_edit_server"
+        android:id="@+id/loginAct_text_server"
+        style="@style/style_text_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/text_bar"
+        android:layout_alignLeft="@id/loginAct_text_server"
+        android:layout_alignRight="@id/loginAct_text_server"
+        android:layout_below="@+id/img_txt_server"
         android:ems="10" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/loginAct_edit_server"
-        android:layout_below="@+id/loginAct_edit_server"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/text_database" />
 
     <Spinner
         android:id="@+id/loginAct_dbspinner"
+        style="@style/style_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignRight="@+id/loginAct_edit_server"
-        android:layout_below="@+id/textView4"
-        android:background="@drawable/database_bar"
-        android:entries="@array/loginAct_dbArr"
-        android:prompt="@string/loginAct_db_prompt" />
+        android:layout_alignLeft="@id/loginAct_text_server"
+        android:layout_alignRight="@id/loginAct_text_server"
+        android:layout_below="@+id/img_txt_database"
+        android:contentDescription="@string/loginAct_db" />
+
+    <ImageView
+        android:id="@+id/img_txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/img_txt_server"
+        android:layout_below="@+id/loginAct_dbspinner"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/loginAct_username"
+        android:src="@drawable/text_user" />
 
     <EditText
-        android:id="@+id/loginAct_edit_pswd"
+        android:id="@+id/loginAct_text_user"
+        style="@style/style_text_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:background="@drawable/text_bar"
-        android:ems="10"
-        android:inputType="textPassword" >
+        android:layout_alignLeft="@id/loginAct_text_server"
+        android:layout_alignRight="@id/loginAct_text_server"
+        android:layout_below="@+id/img_txt_user"
+        android:ems="10" />
 
-        <requestFocus />
-    </EditText>
+    <ImageView
+        android:id="@+id/img_txt_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/img_txt_server"
+        android:layout_below="@+id/loginAct_text_user"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/loginAct_paswd"
+        android:src="@drawable/text_pswd" />
+
+    <EditText
+        android:id="@+id/loginAct_text_pswd"
+        style="@style/style_text_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/loginAct_text_server"
+        android:layout_alignRight="@id/loginAct_text_server"
+        android:layout_below="@+id/img_txt_pswd"
+        android:ems="10"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/loginAct_button_login"
-        style="@style/AppBaseTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/loginAct_edit_pswd"
-        android:layout_toRightOf="@+id/textView2"
-        android:background="@drawable/button_login"
-        android:onClick="onClickButtonLogin" />
+        android:layout_alignLeft="@+id/loginAct_text_pswd"
+        android:layout_below="@+id/loginAct_text_pswd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/button_login" />
+
+    <ImageView
+        android:id="@+id/img_txt_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/img_txt_server"
+        android:layout_below="@+id/loginAct_text_server"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/loginAct_db_prompt"
+        android:src="@drawable/text_database" />
 
 </RelativeLayout>
