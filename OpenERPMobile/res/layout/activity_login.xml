@@ -84,7 +84,8 @@
         android:layout_below="@+id/loginAct_text_pswd"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="17dp"
-        android:background="@drawable/button_login" />
+        android:background="@drawable/button_login"
+        android:onClick="onClickButtonLogin" />
 
     <ImageView
         android:id="@+id/img_txt_database"
