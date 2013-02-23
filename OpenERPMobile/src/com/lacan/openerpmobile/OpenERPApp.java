@@ -17,7 +17,7 @@ public class OpenERPApp extends Application
 
 		customerData = new CustomerData(this);
 		
-		customerData.insert(new Customer(1,"a", "b","c","d","e"));
+		customerData.insert(new Customer(1,"a","b","c","d","e"));
 	}
 
 }
