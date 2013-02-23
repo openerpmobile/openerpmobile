@@ -2,13 +2,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_bckground"
     tools:context=".MainActivity" >
 
-    <TextView
+    <ImageView
+        android:id="@+id/mainAct_button_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_logout"
+        android:src="@drawable/button_logout"
+        android:onClick="onClickButtonLogout" />
+
+    <ImageView
+        android:id="@+id/mainAct_button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mainAct_button_logout"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/mainAct_button_logout"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_home"
+        android:src="@drawable/button_home"
+        android:onClick="onClickButtonHome" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_logout"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_sales"
+        android:onClick="onClickButtonSales"
+        android:src="@drawable/main_button_sales" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_sales"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_project"
+        android:src="@drawable/main_button_project" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_accounting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_project"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_accounting"
+        android:src="@drawable/main_button_accounting" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_warehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_accounting"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_warehouse"
+        android:src="@drawable/main_button_warehouse" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_manufacturing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_warehouse"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_manufacturing"
+        android:src="@drawable/main_button_manufacturing" />
+
+    <ImageButton
+        android:id="@+id/mainAct_button_hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAct_button_manufacturing"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_hr"
+        android:src="@drawable/main_button_hr" />
 
 </RelativeLayout>

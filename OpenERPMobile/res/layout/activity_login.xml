@@ -76,17 +76,6 @@
         android:ems="10"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/loginAct_button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/loginAct_text_pswd"
-        android:layout_below="@+id/loginAct_text_pswd"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="17dp"
-        android:background="@drawable/button_login"
-        android:onClick="onClickButtonLogin" />
-
     <ImageView
         android:id="@+id/img_txt_database"
         android:layout_width="wrap_content"
@@ -96,5 +85,17 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/loginAct_db_prompt"
         android:src="@drawable/text_database" />
+
+    <ImageButton
+        android:id="@+id/loginAct_button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginAct_text_pswd"
+        android:layout_marginTop="26dp"
+        android:layout_toRightOf="@+id/img_txt_user"
+        android:background="@null"
+        android:contentDescription="@string/desc_loginAct_button_login"
+        android:onClick="onClickButtonLogin"
+        android:src="@drawable/button_login" />
 
 </RelativeLayout>

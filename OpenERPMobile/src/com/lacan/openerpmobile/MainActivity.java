@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 //to bedzie glowne menu
 public class MainActivity extends Activity
@@ -15,11 +16,8 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		Log.d(TAG, "onCreate");
 
-		//ponizsza linijke napisano TYLKO dla testowania
-		startActivity(new Intent(this, SalesActivity.class));
+		Log.d(TAG, "onCreate");
 	}
 
 	@Override
@@ -36,4 +34,18 @@ public class MainActivity extends Activity
 		Log.d(TAG, "onResume");
 	}
 
+	public void onClickButtonSales(View view)
+	{
+		startActivity(new Intent(this, SalesActivity.class));
+	}
+	
+	public void onClickButtonLogout(View view)
+	{
+		startActivity(new Intent(this, LoginActivity.class));
+	}
+	
+	public void onClickButtonHome(View view)
+	{
+		
+	}
 }
