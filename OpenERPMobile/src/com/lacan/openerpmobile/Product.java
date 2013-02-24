@@ -2,16 +2,18 @@ package com.lacan.openerpmobile;
 
 public class Product
 {
+	private long id;
 	private String name;
 	private String internalReference;
 	private double quantityOnHand;
 	private double forecastedQuantity;
 	private double price;
 
-	public Product(String name, String internalReference,
+	public Product(long id, String name, String internalReference,
 			double quantityOnHand, double forecastedQuantity, double price)
 	{
 		super();
+		this.id = id;
 		this.name = name;
 		this.internalReference = internalReference;
 		this.quantityOnHand = quantityOnHand;
@@ -22,6 +24,11 @@ public class Product
 	public String getName()
 	{
 		return name;
+	}
+
+	public long getId()
+	{
+		return id;
 	}
 
 	public String getInternalReference()

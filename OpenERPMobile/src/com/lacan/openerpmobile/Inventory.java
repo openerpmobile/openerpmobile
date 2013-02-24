@@ -2,19 +2,19 @@ package com.lacan.openerpmobile;
 
 public class Inventory
 {
-	private Product product;
+	private long productId;
 	private double quantity;
 
-	public Inventory(Product product, double quantity)
+	public Inventory(long productId, double quantity)
 	{
 		super();
-		this.product = product;
+		this.productId = productId;
 		this.quantity = quantity;
 	}
 
-	public Product getProduct()
+	public long getProductId()
 	{
-		return product;
+		return productId;
 	}
 
 	public double getQuantity()

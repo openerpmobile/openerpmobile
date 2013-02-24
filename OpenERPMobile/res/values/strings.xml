@@ -45,5 +45,8 @@
     <string name="desc_mainAct_button_warehouse">Warehouse button</string>
     <string name="desc_mainAct_button_manufacturing">Manufacturing button</string>
     <string name="desc_mainAct_button_hr">HR button</string>
+    <string name="loginAct_text_server_hint">&lt;enter server name here></string>
+    <string name="loginAct_text_user_hint">&lt;enter login name here></string>
+    <string name="loginAct_text_pswd_hint">&lt;enter password here></string>
 
 </resources>

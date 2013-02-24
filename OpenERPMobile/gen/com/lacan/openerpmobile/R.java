@@ -122,6 +122,9 @@ public final class R {
         public static final int loginAct_db_prompt=0x7f050005;
         public static final int loginAct_paswd=0x7f050007;
         public static final int loginAct_server=0x7f050003;
+        public static final int loginAct_text_pswd_hint=0x7f050027;
+        public static final int loginAct_text_server_hint=0x7f050025;
+        public static final int loginAct_text_user_hint=0x7f050026;
         public static final int loginAct_title=0x7f050002;
         public static final int loginAct_username=0x7f050006;
         public static final int menu_home=0x7f050010;
