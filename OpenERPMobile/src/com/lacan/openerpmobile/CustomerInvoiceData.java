@@ -66,7 +66,7 @@ public class CustomerInvoiceData
 		public void onCreate(SQLiteDatabase db)
 		{
 			String sql = String
-					.format("create table %s (%s int primary key, %s integer, %s text, %s text, %s real)",
+					.format("create table %s (%s int primary key, %s integer, %s text, %s text, %s double)",
 							TABLE, CI_ID, CI_CUSTOMER_ID, CI_DATE, CI_NUMBER,
 							CI_TOTAL);
 

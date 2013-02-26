@@ -62,7 +62,7 @@ public class InventoryData
 		public void onCreate(SQLiteDatabase db)
 		{
 			String sql = String
-					.format("create table %s (%s int primary key, %s text, %s text)",
+					.format("create table %s (%s int primary key, %s int, %s double)",
 							TABLE, I_ID, I_PRODUCT_ID, I_QUANTITY);
 
 			Log.d(TAG, "onCreate");

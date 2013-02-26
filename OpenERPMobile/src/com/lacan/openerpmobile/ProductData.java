@@ -68,7 +68,7 @@ public class ProductData
 		public void onCreate(SQLiteDatabase db)
 		{
 			String sql = String
-					.format("create table %s (%s int primary key, %s text, %s text, %s text, %s text, %s text)",
+					.format("create table %s (%s int primary key, %s text, %s text, %s double, %s double, %s double)",
 							TABLE, P_ID, P_NAME, P_INTERNAL_REFERENCE, P_QUANTITY_ON_HAND, P_FORECASTED_QUANTITY,
 							P_PRICE);
 
