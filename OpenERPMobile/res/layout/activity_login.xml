@@ -78,17 +78,6 @@
         android:ems="10"
         android:hint="@string/loginAct_text_pswd_hint" />
 
-    <Button
-        android:id="@+id/loginAct_button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/loginAct_text_pswd"
-        android:layout_below="@+id/loginAct_text_pswd"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="17dp"
-        android:background="@drawable/button_login"
-        android:onClick="onClickButtonLogin" />
-
     <ImageView
         android:id="@+id/img_txt_database"
         android:layout_width="wrap_content"
@@ -98,5 +87,18 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/loginAct_db_prompt"
         android:src="@drawable/text_database" />
+
+    <ImageButton
+        android:id="@+id/loginAct_button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginAct_text_pswd"
+        android:layout_below="@+id/loginAct_text_pswd"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_login_button_login"
+        android:onClick="onClickButtonLogin"
+        android:src="@drawable/button_login" />
 
 </RelativeLayout>

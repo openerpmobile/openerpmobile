@@ -48,5 +48,9 @@
     <string name="loginAct_text_server_hint">Enter server address</string>
     <string name="loginAct_text_user_hint">Enter login name</string>
     <string name="loginAct_text_pswd_hint">Enter password</string>
+    <string name="desc_login_button_login">Login button</string>
+    <string name="desc_list_bar">List bar</string>
+    <string name="desc_list_person">Person image</string>
+    <string name="desc_list_button_add">Add button</string>
 
 </resources>

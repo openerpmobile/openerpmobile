@@ -7,16 +7,19 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SimpleCursorAdapter;
+
+import com.lacan.openerpmobile.R.layout;
 
 public class CustomerListActivity extends ListActivity
 {
 	public static final String TAG = "CustomerListActivity";
 
 	public static final String[] FROM =
-		{ CustomerData.C_NAME, CustomerData.C_EMAIL };
+	{ CustomerData.C_NAME, CustomerData.C_EMAIL };
 	public static final int[] TO =
-	{ android.R.id.text1, android.R.id.text2 };
+	{ R.id.list_text_name, R.id.list_text_email };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -29,7 +32,7 @@ public class CustomerListActivity extends ListActivity
 		Cursor cursor = ((OpenERPApp) getApplication()).customerData.query();
 
 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
-				android.R.layout.two_line_list_item, cursor, FROM, TO);
+				layout.list_row, cursor, FROM, TO, 0);
 
 		getListView().setAdapter(adapter);
 	}
@@ -68,6 +71,11 @@ public class CustomerListActivity extends ListActivity
 		default:
 			return false;
 		}
+	}
+
+	public void onClickButtonAdd(View view)
+	{
+		//startActivity(new Intent(this, CustomerAddActivity.class));
 	}
 
 }
