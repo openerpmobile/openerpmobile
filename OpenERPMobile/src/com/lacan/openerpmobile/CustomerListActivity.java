@@ -78,4 +78,8 @@ public class CustomerListActivity extends ListActivity
 		//startActivity(new Intent(this, CustomerAddActivity.class));
 	}
 
+	public void onClickButtonHome(View view)
+	{
+		startActivity(new Intent(this, MainActivity.class));
+	}
 }

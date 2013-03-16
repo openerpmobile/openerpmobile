@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/customer_list_bckground"
+    android:background="@drawable/customer_list_bkgnd"
     tools:context=".CustomerListActivity" >
 
     <ListView
@@ -27,5 +27,17 @@
         android:contentDescription="@string/desc_list_button_add"
         android:src="@drawable/list_button_add"
         android:onClick="onClickButtonAdd" />
+
+    <ImageButton
+        android:id="@+id/list_button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/list_button_add"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/list_button_add"
+        android:background="@null"
+        android:contentDescription="@string/desc_mainAct_button_home"
+        android:src="@drawable/button_home"
+        android:onClick="onClickButtonHome" />
 
 </RelativeLayout>
