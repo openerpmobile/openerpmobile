@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AccountActivity" >
+    tools:context=".AccountActivity"
+    android:background="@drawable/background"
+     >
 
     <Button
         android:id="@+id/accountingAct_button_custinv"

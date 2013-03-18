@@ -63,12 +63,12 @@ public class SalesActivity extends Activity
 
 	public void onClickLeads(View view)
 	{
-		startActivity(new Intent(this, LeadsListActivity.class));
+		//startActivity(new Intent(this, LeadsListActivity.class));
 	}
 
 	public void onClickOpp(View view)
 	{
-		startActivity(new Intent(this, OpportunitiesActivity.class));
+		//startActivity(new Intent(this, OpportunitiesActivity.class));
 	}
 
 	public void onClickSOrder(View view)

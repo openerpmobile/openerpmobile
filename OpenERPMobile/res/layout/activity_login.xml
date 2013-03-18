@@ -34,7 +34,9 @@
         android:layout_alignLeft="@id/loginAct_text_server"
         android:layout_alignRight="@id/loginAct_text_server"
         android:layout_below="@+id/img_txt_database"
-        android:contentDescription="@string/loginAct_db" />
+        android:contentDescription="@string/loginAct_db"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
 
     <ImageView
         android:id="@+id/img_txt_user"
