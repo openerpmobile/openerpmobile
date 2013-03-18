@@ -60,13 +60,18 @@ public final class R {
         public static final int main_button_warehouse=0x7f020021;
         public static final int main_button_warehouse_pressed=0x7f020022;
         public static final int main_button_warehouse_src=0x7f020023;
-        public static final int settings_button=0x7f020024;
-        public static final int settings_button_pressed=0x7f020025;
-        public static final int text_bar=0x7f020026;
-        public static final int text_database=0x7f020027;
-        public static final int text_pswd=0x7f020028;
-        public static final int text_server=0x7f020029;
-        public static final int text_user=0x7f02002a;
+        public static final int sales_background=0x7f020024;
+        public static final int sales_customers_bar=0x7f020025;
+        public static final int sales_leads_bar=0x7f020026;
+        public static final int sales_opp_bar=0x7f020027;
+        public static final int sales_order_bar=0x7f020028;
+        public static final int settings_button=0x7f020029;
+        public static final int settings_button_pressed=0x7f02002a;
+        public static final int text_bar=0x7f02002b;
+        public static final int text_database=0x7f02002c;
+        public static final int text_pswd=0x7f02002d;
+        public static final int text_server=0x7f02002e;
+        public static final int text_user=0x7f02002f;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;

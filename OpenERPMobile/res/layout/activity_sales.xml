@@ -1,38 +1,63 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:orientation="vertical"
+    android:background="@drawable/sales_background"
     tools:context=".SalesActivity" >
 
-    <Button
+    <ImageButton
         android:id="@+id/salesAct_button_customers"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="170dp"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_customers"
         android:onClick="onClickCustomers"
-        android:text="@string/salesAct_button_customers" />
-
-    <Button
+        android:scaleType="centerInside"
+        android:src="@drawable/sales_customers_bar" />
+    
+    <ImageButton
         android:id="@+id/salesAct_button_leads"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/salesAct_button_customers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_leads"
         android:onClick="onClickLeads"
-        android:text="@string/salesAct_button_leads" />
+        android:scaleType="centerInside"
+        android:src="@drawable/sales_leads_bar" />
 
-    <Button
+    <ImageButton
         android:id="@+id/salesAct_button_opp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/salesAct_button_leads"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_opp"
         android:onClick="onClickOpp"
-        android:text="@string/salesAct_button_opp" />
+        android:scaleType="centerInside"
+        android:src="@drawable/sales_opp_bar" />
 
-    <Button
+    <ImageButton
         android:id="@+id/salesAct_button_sorder"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/salesAct_button_opp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_sorder"
         android:onClick="onClickSOrder"
-        android:text="@string/salesAct_button_sorder" />
+        android:scaleType="centerInside"
+        android:src="@drawable/sales_order_bar" />
 
-</LinearLayout>
+</RelativeLayout>
