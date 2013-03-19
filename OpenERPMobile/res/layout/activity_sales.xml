@@ -60,4 +60,13 @@
         android:scaleType="centerInside"
         android:src="@drawable/sales_order_bar" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/salesAct_button_customers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:src="@drawable/menu_bar" />
+
 </RelativeLayout>
