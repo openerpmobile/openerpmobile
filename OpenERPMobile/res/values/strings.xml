@@ -55,5 +55,7 @@
     <string name="desc_list_button_add">Add button</string>
     <string name="salesAct_menu_view">menu view</string>
     <string name="salesAct_button_logout">Logout</string>
+    <string name="title_activity_customer_details">CustomerDetailsActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

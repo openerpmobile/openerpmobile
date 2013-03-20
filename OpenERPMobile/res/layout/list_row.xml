@@ -10,9 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@null"
         android:contentDescription="@string/desc_list_bar"
-        android:src="@drawable/list_bar"
-        android:background="@null" />
+        android:onClick="onClickCustomerDetails"
+        android:src="@drawable/list_bar" />
 
     <ImageView
         android:id="@+id/list_img_person"
@@ -29,19 +30,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/list_img_person"
-        android:layout_toRightOf="@+id/list_img_person"
         android:layout_marginTop="2dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Name" />
+        android:layout_toRightOf="@+id/list_img_person"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/list_text_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/list_img_bar"
-        android:layout_toRightOf="@+id/list_img_person"
         android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/list_img_person"
         android:text="Email"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/list_text_phone"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:visibility="gone" />
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 import com.lacan.openerpmobile.R.layout;
 
@@ -17,9 +18,9 @@ public class CustomerListActivity extends ListActivity
 	public static final String TAG = "CustomerListActivity";
 
 	public static final String[] FROM =
-	{ CustomerData.C_NAME, CustomerData.C_EMAIL };
+	{ CustomerData.C_NAME, CustomerData.C_EMAIL, CustomerData.C_PHONE };
 	public static final int[] TO =
-	{ R.id.list_text_name, R.id.list_text_email };
+	{ R.id.list_text_name, R.id.list_text_email, R.id.list_text_phone };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -71,6 +72,17 @@ public class CustomerListActivity extends ListActivity
 		default:
 			return false;
 		}
+	}
+	
+	public void onClickCustomerDetails (View view)
+	{
+		Intent intent = new Intent(this, CustomerDetailsActivity.class);
+		
+		TextView textViewPhone = (TextView) findViewById(R.id.list_text_phone);
+		String phone = textViewPhone.getText().toString();
+		intent.putExtra(CustomerData.C_PHONE, phone);
+		
+		startActivity(intent);
 	}
 
 	public void onClickButtonAdd(View view)
