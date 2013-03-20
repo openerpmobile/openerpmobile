@@ -12,7 +12,6 @@
         android:layout_alignParentTop="true"
         android:background="@null"
         android:contentDescription="@string/desc_list_bar"
-        android:onClick="onClickCustomerDetails"
         android:src="@drawable/list_bar" />
 
     <ImageView

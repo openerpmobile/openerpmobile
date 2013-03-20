@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
@@ -37,6 +38,20 @@ public class CustomerListActivity extends ListActivity
 				layout.list_row, cursor, FROM, TO, 0);
 
 		getListView().setAdapter(adapter);
+	}
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id)
+	{
+		Intent intent = new Intent(this, CustomerDetailsActivity.class);
+		
+		
+		// v.findViewById, a nie samo findViewById
+		TextView textViewPhone = (TextView) v.findViewById(R.id.list_text_phone);
+		String phone = textViewPhone.getText().toString();
+		intent.putExtra(CustomerData.C_PHONE, phone);
+		
+		startActivity(intent);
 	}
 
 	@Override
@@ -77,13 +92,7 @@ public class CustomerListActivity extends ListActivity
 	
 	public void onClickCustomerDetails (View view)
 	{
-		Intent intent = new Intent(this, CustomerDetailsActivity.class);
-		
-		TextView textViewPhone = (TextView) findViewById(R.id.list_text_phone);
-		String phone = textViewPhone.getText().toString();
-		intent.putExtra(CustomerData.C_PHONE, phone);
-		
-		startActivity(intent);
+
 	}
 
 	public void onClickButtonAdd(View view)

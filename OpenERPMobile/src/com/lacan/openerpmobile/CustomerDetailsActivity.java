@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class CustomerDetailsActivity extends Activity
 {
 	TextView textViewPhone;
+	String phone;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -17,13 +18,20 @@ public class CustomerDetailsActivity extends Activity
 		super.onCreate(savedInstanceState);
 
 		Intent intent = getIntent();
-		String phone = intent.getStringExtra(CustomerData.C_PHONE);
+		phone = intent.getStringExtra(CustomerData.C_PHONE);
 
 		setContentView(R.layout.activity_customer_details);
-		
+	}
+	
+
+	@Override
+	protected void onResume()
+	{
 		textViewPhone = (TextView) findViewById(R.id.phone_number);
 		textViewPhone.setText(phone);
+		super.onResume();
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
