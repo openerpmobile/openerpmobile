@@ -3,12 +3,14 @@ package com.lacan.openerpmobile;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 
 public class CustomerDetailsActivity extends Activity
 {
-
+	TextView textViewPhone;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -17,11 +19,10 @@ public class CustomerDetailsActivity extends Activity
 		Intent intent = getIntent();
 		String phone = intent.getStringExtra(CustomerData.C_PHONE);
 
-		TextView textViewPhone = new TextView(this);
+		setContentView(R.layout.activity_customer_details);
+		
 		textViewPhone = (TextView) findViewById(R.id.phone_number);
 		textViewPhone.setText(phone);
-
-		setContentView(textViewPhone);
 	}
 
 	@Override
