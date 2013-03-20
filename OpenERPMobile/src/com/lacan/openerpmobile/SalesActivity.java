@@ -65,6 +65,16 @@ public class SalesActivity extends Activity
 	{
 		//startActivity(new Intent(this, LeadsListActivity.class));
 	}
+	
+	public void onClickButtonHome(View view)
+	{
+		startActivity(new Intent(this, MainActivity.class));
+	}
+	
+	public void onClickButtonLogout(View view)
+	{
+		startActivity(new Intent(this, LoginActivity.class));
+	}
 
 	public void onClickOpp(View view)
 	{

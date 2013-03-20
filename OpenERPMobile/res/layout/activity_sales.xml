@@ -61,12 +61,38 @@
         android:src="@drawable/sales_order_bar" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/salesAct_menu_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/salesAct_button_customers"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="67dp"
+        android:contentDescription="@string/salesAct_menu_view"
         android:src="@drawable/menu_bar" />
+
+    <ImageButton
+        android:id="@+id/salesAct_button_home"
+        android:onClick="onClickButtonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/salesAct_button_logout"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/salesAct_button_logout"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_home"
+        android:src="@drawable/button_home" />
+
+    <ImageButton
+        android:id="@+id/salesAct_button_logout"
+        android:onClick="onClickButtonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:background="@null"
+        android:contentDescription="@string/salesAct_button_logout"
+        android:src="@drawable/button_logout" />
 
 </RelativeLayout>

@@ -23,6 +23,7 @@
     <string name="salesAct_button_leads">Leads</string>
     <string name="salesAct_button_opp">Opportunities</string>
     <string name="salesAct_button_sorder">Sales order</string>
+    <string name="salesAct_button_home">Home</string>
     <string name="menu_logout">Logout</string>
     <string name="menu_home">Home</string>
     <string name="title_activity_customer_list">Customers</string>
@@ -52,5 +53,7 @@
     <string name="desc_list_bar">List bar</string>
     <string name="desc_list_person">Person image</string>
     <string name="desc_list_button_add">Add button</string>
+    <string name="salesAct_menu_view">menu view</string>
+    <string name="salesAct_button_logout">Logout</string>
 
 </resources>
