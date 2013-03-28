@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.view.*;
 
 import com.lacan.openerpmobile.R.layout;
 
@@ -32,10 +33,18 @@ public class CustomerListActivity extends ListActivity
 		// Show the Up button in the action bar.
 		// getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		Cursor cursor = ((OpenERPApp) getApplication()).customerData.query();
+		final Cursor cursor = ((OpenERPApp) getApplication()).customerData.query();
 
 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
-				layout.list_row, cursor, FROM, TO, 0);
+				layout.list_row, cursor, FROM, TO, 0)
+		{
+				    @Override
+				    public View getView (int position, View convertView, ViewGroup parent) {
+				        View view = super.getView(position, convertView, parent);
+				        view.setTag(cursor.getInt(cursor.getColumnIndex(CustomerData.C_ID)));
+				        return view;
+				    }
+		};
 
 		getListView().setAdapter(adapter);
 	}
@@ -44,13 +53,15 @@ public class CustomerListActivity extends ListActivity
 	protected void onListItemClick(ListView l, View v, int position, long id)
 	{
 		Intent intent = new Intent(this, CustomerDetailsActivity.class);
-		
-		
+
 		// v.findViewById, a nie samo findViewById
-		TextView textViewPhone = (TextView) v.findViewById(R.id.list_text_phone);
+		TextView textViewPhone = (TextView) v
+				.findViewById(R.id.list_text_phone);
 		String phone = textViewPhone.getText().toString();
 		intent.putExtra(CustomerData.C_PHONE, phone);
-		
+		String idText = v.getTag().toString();
+		Toast.makeText(this, idText, Toast.LENGTH_SHORT).show();
+
 		startActivity(intent);
 	}
 
@@ -89,15 +100,15 @@ public class CustomerListActivity extends ListActivity
 			return false;
 		}
 	}
-	
-	public void onClickCustomerDetails (View view)
+
+	public void onClickCustomerDetails(View view)
 	{
 
 	}
 
 	public void onClickButtonAdd(View view)
 	{
-		//startActivity(new Intent(this, CustomerAddActivity.class));
+		// startActivity(new Intent(this, CustomerAddActivity.class));
 	}
 
 	public void onClickButtonHome(View view)
