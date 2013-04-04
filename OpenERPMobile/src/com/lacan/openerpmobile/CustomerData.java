@@ -56,6 +56,15 @@ public class CustomerData
 		return cursor;
 	}
 
+	public Cursor query(String selectionId)
+	{
+		db = dbHelper.getReadableDatabase();
+		Cursor cursor = db.query(TABLE, null, C_ID + " = ?", new String[] { selectionId },
+				null, null, null);
+		
+		return cursor;
+	}
+
 	class DbHelper extends SQLiteOpenHelper
 	{
 

@@ -8,11 +8,9 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.view.*;
 
 import com.lacan.openerpmobile.R.layout;
 
@@ -33,17 +31,20 @@ public class CustomerListActivity extends ListActivity
 		// Show the Up button in the action bar.
 		// getActionBar().setDisplayHomeAsUpEnabled(true);
 
-		final Cursor cursor = ((OpenERPApp) getApplication()).customerData.query();
+		final Cursor cursor = ((OpenERPApp) getApplication()).customerData
+				.query();
 
 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
 				layout.list_row, cursor, FROM, TO, 0)
 		{
-				    @Override
-				    public View getView (int position, View convertView, ViewGroup parent) {
-				        View view = super.getView(position, convertView, parent);
-				        view.setTag(cursor.getInt(cursor.getColumnIndex(CustomerData.C_ID)));
-				        return view;
-				    }
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent)
+			{
+				View view = super.getView(position, convertView, parent);
+				view.setTag(cursor.getInt(cursor
+						.getColumnIndex(CustomerData.C_ID)));
+				return view;
+			}
 		};
 
 		getListView().setAdapter(adapter);
@@ -55,12 +56,12 @@ public class CustomerListActivity extends ListActivity
 		Intent intent = new Intent(this, CustomerDetailsActivity.class);
 
 		// v.findViewById, a nie samo findViewById
-		TextView textViewPhone = (TextView) v
-				.findViewById(R.id.list_text_phone);
-		String phone = textViewPhone.getText().toString();
-		intent.putExtra(CustomerData.C_PHONE, phone);
+		// TextView textViewPhone = (TextView) v
+		// .findViewById(R.id.list_text_phone);
+		// String phone = textViewPhone.getText().toString();
 		String idText = v.getTag().toString();
-		Toast.makeText(this, idText, Toast.LENGTH_SHORT).show();
+		intent.putExtra(CustomerData.C_ID, idText);
+		// Toast.makeText(this, idText, Toast.LENGTH_SHORT).show();
 
 		startActivity(intent);
 	}
@@ -121,7 +122,7 @@ public class CustomerListActivity extends ListActivity
 	public void onBackPressed()
 	{
 		// TODO Auto-generated method stub
-		//super.onBackPressed();
+		// super.onBackPressed();
 		finish();
 		startActivity(new Intent(this, SalesActivity.class));
 	}
