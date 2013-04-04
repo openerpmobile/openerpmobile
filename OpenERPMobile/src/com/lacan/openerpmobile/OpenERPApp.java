@@ -17,10 +17,19 @@ public class OpenERPApp extends Application
 
 		customerData = new CustomerData(this);
 		
-		customerData.insert(new Customer(1, "Pawel Kobojek", "Zalesie 86a", "google.com", "69-43", "PawelKobojek@gmail.com"));
-		customerData.insert(new Customer(2, "Maciej Dlus", "Ukraina 0", "google.ua", "NULL", "Maciek@napewnoniegmail.com"));
+		customerData.insert(new Customer(1, "Abc Def", "Ghi 1", "google.com", "123456789", "abc@gmail.com"));
+		customerData.insert(new Customer(2, "Test Test", "Test 0", "google.ua", "987654321", "test@gmail.com"));
 		customerData.insert(new Customer(3, "Pan Prezes", "Riviera", "hajs.pl", "1", "Prezes@Pan.com"));
-		customerData.insert(new Customer(4, "Maciej Brylewicz", "Warszawa","", "123", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
+		customerData.insert(new Customer(4, "test", "Warszawa", "", "111222333", ""));
 	}
 
 }

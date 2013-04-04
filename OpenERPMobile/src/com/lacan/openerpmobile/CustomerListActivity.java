@@ -113,6 +113,16 @@ public class CustomerListActivity extends ListActivity
 
 	public void onClickButtonHome(View view)
 	{
+		finish();
 		startActivity(new Intent(this, MainActivity.class));
+	}
+
+	@Override
+	public void onBackPressed()
+	{
+		// TODO Auto-generated method stub
+		//super.onBackPressed();
+		finish();
+		startActivity(new Intent(this, SalesActivity.class));
 	}
 }

@@ -16,7 +16,8 @@
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity
             android:name="com.lacan.openerpmobile.LoginActivity"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,12 +26,14 @@
         </activity>
         <activity
             android:name="com.lacan.openerpmobile.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:noHistory="true" >
         </activity>
         <activity
             android:name="com.lacan.openerpmobile.SalesActivity"
             android:label="@string/title_activity_sales"
-            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity"
+            android:noHistory="true" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lacan.openerpmobile.MainActivity" />
@@ -38,7 +41,8 @@
         <activity
             android:name="com.lacan.openerpmobile.CustomerListActivity"
             android:label="@string/title_activity_customer_list"
-            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity"
+            android:noHistory="true" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lacan.openerpmobile.SalesActivity" />
@@ -46,7 +50,8 @@
         <activity
             android:name="com.lacan.openerpmobile.AccountingActivity"
             android:label="@string/title_activity_accounting"
-            android:parentActivityName="com.lacan.openerpmobile.MainActivity" >
+            android:parentActivityName="com.lacan.openerpmobile.MainActivity"
+            android:noHistory="true" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lacan.openerpmobile.MainActivity" />
@@ -54,7 +59,8 @@
         <activity
             android:name="com.lacan.openerpmobile.LeadsListActivity"
             android:label="@string/title_activity_leads_list"
-            android:parentActivityName="com.lacan.openerpmobile.SalesActivity" >
+            android:parentActivityName="com.lacan.openerpmobile.SalesActivity"
+            android:noHistory="true" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lacan.openerpmobile.SalesActivity" />
@@ -62,14 +68,16 @@
         <activity
             android:name="com.lacan.openerpmobile.OpportunitiesActivity"
             android:label="@string/title_activity_opportunities"
-            android:parentActivityName="com.lacan.openerpmobile.SalesActivity" >
+            android:parentActivityName="com.lacan.openerpmobile.SalesActivity"
+            android:noHistory="true" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lacan.openerpmobile.SalesActivity" />
         </activity>
         <activity
             android:name="com.lacan.openerpmobile.CustomerDetailsActivity"
-            android:label="@string/title_activity_customer_details" >
+            android:label="@string/title_activity_customer_details"
+            android:noHistory="true" >
         </activity>
     </application>
 

@@ -68,11 +68,22 @@ public class SalesActivity extends Activity
 	
 	public void onClickButtonHome(View view)
 	{
-		startActivity(new Intent(this, MainActivity.class));
+		//startActivity(new Intent(this, MainActivity.class));
+		onBackPressed();
 	}
 	
+	@Override
+	public void onBackPressed()
+	{
+		// TODO Auto-generated method stub
+		finish();
+		startActivity(new Intent(this, MainActivity.class));
+		//super.onBackPressed();
+	}
+
 	public void onClickButtonLogout(View view)
 	{
+		finish();
 		startActivity(new Intent(this, LoginActivity.class));
 	}
 

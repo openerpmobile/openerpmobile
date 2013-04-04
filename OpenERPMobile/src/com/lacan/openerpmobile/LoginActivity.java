@@ -146,4 +146,14 @@ public class LoginActivity extends Activity implements OnItemSelectedListener
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public void onBackPressed()
+	{
+		// TODO Auto-generated method stub
+		//super.onBackPressed();
+		finish();
+	}
+	
+	
 }

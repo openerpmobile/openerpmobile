@@ -38,12 +38,22 @@ public class MainActivity extends Activity
 	{
 		startActivity(new Intent(this, SalesActivity.class));
 	}
-	
+
 	public void onClickButtonLogout(View view)
 	{
+		finish();
 		startActivity(new Intent(this, LoginActivity.class));
 	}
-	
+
+	@Override
+	public void onBackPressed()
+	{
+		// TODO Auto-generated method stub
+		//finish();
+		startActivity(new Intent(this, LoginActivity.class));
+		// super.onBackPressed();
+	}
+
 	public void onClickButtonHome(View view)
 	{
 		
