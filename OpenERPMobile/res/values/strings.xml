@@ -57,5 +57,9 @@
     <string name="salesAct_button_logout">Logout</string>
     <string name="title_activity_customer_details">CustomerDetailsActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="desc_custDetAct_photo">Default Photo</string>
+    <string name="desc_custDetAct_btn_phonecall">Phone Call button</string>
+    <string name="desc_custDetAct_mail">Mailto button</string>
+    <string name="desc_custDetAct_btn_web">Web button</string>
 
 </resources>

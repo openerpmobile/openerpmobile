@@ -2,17 +2,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CustomerDetailsActivity" >
+    android:background="@drawable/cust_det_bkgnd"
+    tools:context=".MainActivity" >
 
     <TextView
-        android:autoLink="all"
-        android:id="@+id/phone_number"
+        android:id="@+id/textName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="798710055" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="24dp"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textMail"
+        android:layout_alignTop="@+id/button_web"
+        android:text="Web"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textPhone"
+        android:layout_alignTop="@+id/button_mail"
+        android:text="Mail"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_web"
+        android:layout_below="@id/button_web"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="24dp"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imagePhoto"
+        android:layout_toRightOf="@id/button_web"
+        android:text="phone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imagePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/textName"
+        android:layout_marginRight="18dp"
+        android:contentDescription="@string/desc_custDetAct_photo"
+        android:src="@drawable/cust_det_photo" />
+
+    <ImageButton
+        android:id="@+id/button_phonecall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textName"
+        android:layout_alignTop="@+id/textPhone"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_custDetAct_btn_phonecall"
+        android:src="@drawable/cust_det_button_phonecall"
+        android:onClick="onPhoneButtonClick" />
+
+    <ImageButton
+        android:id="@id/button_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_phonecall"
+        android:layout_below="@id/button_phonecall"
+        android:layout_marginTop="28dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_custDetAct_mail"
+        android:src="@drawable/cust_det_button_mail" 
+        android:onClick="onMailButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/button_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/button_mail"
+        android:layout_below="@id/button_mail"
+        android:layout_marginTop="21dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_custDetAct_btn_web"
+        android:src="@drawable/cust_det_button_web"
+        android:onClick="onWebButtonClick" />
 
 </RelativeLayout>
