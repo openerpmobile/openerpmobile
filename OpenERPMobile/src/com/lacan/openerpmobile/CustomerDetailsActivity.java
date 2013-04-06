@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract.CommonDataKinds.Email;
+import android.text.Html;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -80,17 +82,28 @@ public class CustomerDetailsActivity extends Activity
 		Intent intent = new Intent(Intent.ACTION_CALL);
 
 		intent.setData(Uri.parse("tel:" + phone));
-		startActivity(intent);
+		startActivity(Intent.createChooser(intent, "Phone call..."));
+		//startActivity(intent);
 	}
 
 	public void onMailButtonClick(View view)
 	{
+		final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
+		/* Fill it with Data */
+		emailIntent.setType("plain/html");
+		emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{this.email});
+		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "");
+		emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(""));
+
+		/* Send it off to the Activity-Chooser */
+		startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 	}
 
 	public void onWebButtonClick(View view)
 	{
-
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + this.web));
+		startActivity(Intent.createChooser(intent, "Web browser..."));
 	}
 
 }
